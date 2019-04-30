@@ -35,7 +35,7 @@ export default {
             this.resultado = numero * numero
         },
         sayHi () {
-           alert('puto el que lo lea ')
+           alert('Shh es un secreto')
         }
     }
 }
