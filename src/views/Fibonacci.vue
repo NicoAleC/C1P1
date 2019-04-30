@@ -10,7 +10,7 @@
 import Fibonacci from '@/components/Fibonacci.vue'
 
 export default {
-  name: 'home',
+  name: 'fibonacci',
   components: {
     Fibonacci
   }

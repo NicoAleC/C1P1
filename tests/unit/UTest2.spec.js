@@ -3,8 +3,10 @@ import { shallowMount } from '@vue/test-utils'
 import Fibonacci from '@/components/Fibonacci.vue'
 
 describe('Fibonacci.vue', () => {
-  it('suceción de Fibonacci', () => {
+  it('suceción de Fibonacci con la variable resultado', () => {
     const wrapper = shallowMount(Fibonacci)
-    expect(wrapper.vm.fib(3)).to.equal(2);
+    wrapper.vm.numero = 3
+    wrapper.vm.calc()
+    expect(wrapper.vm.resultado).to.equal(2);
   })
 })

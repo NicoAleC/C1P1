@@ -4,6 +4,7 @@
         <button type="button" v-on:click="sayHi">Mensaje Secreto</button>
         <hr>
         <input type="number" v-model="numero">
+        <br>
         <button type="button" v-on:click="calc">Calcular</button>
         <h3>{{ resultado }}</h3>
     </div>
@@ -20,11 +21,9 @@ export default {
     methods: {
         calc () {
             this.resultado = this.fib(this.numero)
-            console.log(this.resultado)
         },
         fib (n) {
-            console.log('este es el numero: ' + n)
-            if (n <= 0 ){
+            if (n <= 0 || n % 1 != 0){
                 return 0
             } else if(n === 1) {
                 return 1
