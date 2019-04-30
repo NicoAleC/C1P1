@@ -22,6 +22,13 @@ export default new Router({
       component: function () {
         return import(/* webpackChunkName: "about" */ './views/About.vue')
       }
+    },
+    {
+      path: '/fibonacci',
+      name: 'fibonacci',
+      component: function () {
+        return import('./views/Fibonacci.vue')
+      }
     }
   ]
 })

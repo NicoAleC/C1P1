@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1 @click="sayHi">{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -35,7 +35,16 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
+    msg2: {
+      type: Boolean,
+      default: false
+    }
+  },
+  methods: {
+    sayHi () {
+      alert('puto el que lo lea ')
+    }
   }
 }
 </script>
